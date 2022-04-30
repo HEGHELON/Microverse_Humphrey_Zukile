@@ -4,9 +4,56 @@
     <meta charset="UTF-8" />
     <title>Product Landing Page</title>
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+        @media only screen and (max-width: 600px){
+            body{
+              width: 100%;
+            }
+
+            nav{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            }
+          }
+
+        body{
+          width: 100%;
+        }
+
+        nav{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          background-color: gray;
+          margin: 0;
+        }
+
+        ul{
+          width: 60%;
+          display: flex;
+          flex-direction: row;
+          list-style: none;
+          justify-content: space-around;
+        }
+
+        li a{
+          font-family: verdana, sans-serif;
+          font-weight: bolder;
+          color: white;
+          text-decoration: none;
+        }
+
+        #video{
+          width: 100%;
+          min-height: 480px;
+        }
+
+    </style>
   </head>
 
   <body>
+
     <header id="header">
       <nav id="nav-bar">
         <span id="nav-brand">
@@ -18,20 +65,19 @@
             alt="Apple Logo"
           />
         </span>
-        <ul>
-          <li><a href="#welcome" class="nav-link">Welcome</a></li>
-          <li><a href="#product-specs" class="nav-link">Product Specs</a></li>
-          <li><a href="#buy-now" class="nav-link">Buy Now</a></li>
+        <ul id="nav-links">
+          <li class="nav-li"><a href="#welcome" class="nav-link">Welcome</a></li>
+          <li class="nav-li"><a href="#product-specs" class="nav-link">Product Specs</a></li>
+          <li class="nav-li"><a href="#buy-now" class="nav-link">Buy Now</a></li>
         </ul>
       </nav>
     </header>
     <section id="welcome">
       <h1>Apple iPhone 13 Pro Max</h1>
-      <div>
+      <div><!-- ?&autoplay=1 width="560"
+      height="315"-->
         <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/XKfgdkcIUxw?&autoplay=1"
+          src="https://www.youtube.com/embed/XKfgdkcIUxw"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -41,9 +87,12 @@
       </div>
     </section>
 
-    <section id="product-specs"></section>
+    <section id="product-specs">
+      <h2>iPhone 13 Pro Max Specifications</h2>
+    </section>
 
     <section id="buy-now">
+      <h2>Buy an iphone 13 Pro Max now</h2>
       <form
         id="form"
         action="https://www.freecodecamp.com/email-submit"
