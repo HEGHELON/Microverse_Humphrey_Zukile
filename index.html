@@ -5,55 +5,93 @@
     <title>Product Landing Page</title>
     <link rel="stylesheet" href="css/style.css" />
     <style>
-        @media only screen and (max-width: 600px){
-            body{
-              width: 100%;
-            }
-
-            nav{
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-            }
-          }
-
-        body{
+      @media only screen and (max-width: 700px) {
+        body {
           width: 100%;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
         }
 
-        nav{
+        nav {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          background-color: gray;
-          margin: 0;
         }
-
-        ul{
-          width: 60%;
-          display: flex;
-          flex-direction: row;
-          list-style: none;
-          justify-content: space-around;
+        h1 {
+          margin-top: 100px;
+          font-size: 10px;
         }
+      }
 
-        li a{
-          font-family: verdana, sans-serif;
-          font-weight: bolder;
-          color: white;
-          text-decoration: none;
-        }
+      body {
+        width: 100%;
+        text-align: center;
+      }
+      header,
+      #header,
+      #nav-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: gray;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+      }
 
-        #video{
-          width: 100%;
-          min-height: 480px;
-        }
+      nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: gray;
+        margin: 0;
+      }
 
+      ul {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-around;
+      }
+
+      li a {
+        font-family: verdana, sans-serif;
+        font-weight: bolder;
+        color: white;
+        text-decoration: none;
+      }
+      h1 {
+        margin-top: 100px;
+        font-size: 38px;
+      }
+
+      #video {
+        width: 100%;
+        min-height: 480px;
+      }
+
+      #buy-now {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 480px;
+        background: linear-gradient(silver, gray);
+      }
+      #form-wrapper {
+        width: 40%;
+        height: 40%;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+        padding-top: 30px;
+      }
     </style>
   </head>
 
   <body>
-
     <header id="header">
       <nav id="nav-bar">
         <span id="nav-brand">
@@ -66,18 +104,25 @@
           />
         </span>
         <ul id="nav-links">
-          <li class="nav-li"><a href="#welcome" class="nav-link">Welcome</a></li>
-          <li class="nav-li"><a href="#product-specs" class="nav-link">Product Specs</a></li>
-          <li class="nav-li"><a href="#buy-now" class="nav-link">Buy Now</a></li>
+          <li class="nav-li">
+            <a href="#welcome" class="nav-link">Welcome</a>
+          </li>
+          <li class="nav-li">
+            <a href="#product-specs" class="nav-link">Product Specs</a>
+          </li>
+          <li class="nav-li">
+            <a href="#buy-now" class="nav-link">Buy Now</a>
+          </li>
         </ul>
       </nav>
     </header>
     <section id="welcome">
       <h1>Apple iPhone 13 Pro Max</h1>
-      <div><!-- ?&autoplay=1 width="560"
+      <div>
+        <!-- ?&autoplay=1 width="560"
       height="315"-->
         <iframe
-          src="https://www.youtube.com/embed/XKfgdkcIUxw"
+          src="https://www.youtube.com/embed/XKfgdkcIUxw?autoplay=1"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -92,28 +137,30 @@
     </section>
 
     <section id="buy-now">
-      <h2>Buy an iphone 13 Pro Max now</h2>
-      <form
-        id="form"
-        action="https://www.freecodecamp.com/email-submit"
-        method="POST"
-      >
-        <label for="email">Email</label>
-        <input
-          type="email"
-          placeholder="Enter email"
-          required
-          id="email"
-          name="email"
-        />
-        <button
-          id="submit"
-          name="submit"
-          formaction="https://www.freecodecamp.com/email-submit"
+      <div id="form-wrapper">
+        <h2>Buy an iphone 13 Pro Max now</h2>
+        <form
+          id="form"
+          action="https://www.freecodecamp.com/email-submit"
+          method="POST"
         >
-          Submit
-        </button>
-      </form>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            placeholder="Enter email"
+            required
+            id="email"
+            name="email"
+          />
+          <button
+            id="submit"
+            name="submit"
+            formaction="https://www.freecodecamp.com/email-submit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     </section>
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
